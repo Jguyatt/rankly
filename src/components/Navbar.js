@@ -17,7 +17,7 @@ const Navbar = () => {
         </ul>
         {/* CTA Button */}
         <a href="https://calendly.com/ranklyai/30min?month=2025-07" className="ml-6 border-2 border-primary-500 text-white font-bold px-6 py-2 rounded-full hover:bg-primary-500 hover:text-black transition text-base whitespace-nowrap mr-6 my-2">
-          Book a Free Consultation
+          Get Started!
         </a>
         {/* Mobile Hamburger */}
         <button
