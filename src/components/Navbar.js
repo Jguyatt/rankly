@@ -3,6 +3,15 @@ import React, { useState } from 'react';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleNavConversion = (e) => {
+    if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-17306411174/F9MfCOyO_OkaEKbBq7xA'
+      });
+    }
+    // Let the link proceed as normal
+  };
+
   return (
     <nav className="w-full flex justify-center py-6 px-4 pointer-events-none" style={{ position: 'fixed', top: '32px', left: 0, zIndex: 50 }}>
       <div className="w-full max-w-7xl flex items-center justify-between bg-black bg-opacity-40 backdrop-blur-md rounded-2xl shadow-xl pointer-events-auto">
@@ -16,7 +25,11 @@ const Navbar = () => {
           <li><a href="#about" className="hover:text-primary-500 transition">About</a></li>
         </ul>
         {/* CTA Button */}
-        <a href="https://calendly.com/ranklyai/30min?month=2025-07" className="ml-6 border-2 border-primary-500 text-white font-bold px-6 py-2 rounded-full hover:bg-primary-500 hover:text-black transition text-base whitespace-nowrap mr-6 my-2">
+        <a
+          href="https://calendly.com/ranklyai/30min?month=2025-07"
+          className="ml-6 border-2 border-primary-500 text-white font-bold px-6 py-2 rounded-full hover:bg-primary-500 hover:text-black transition text-base whitespace-nowrap mr-6 my-2"
+          onClick={handleNavConversion}
+        >
           Get Started!
         </a>
         {/* Mobile Hamburger */}
